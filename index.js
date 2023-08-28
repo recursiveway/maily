@@ -25,19 +25,23 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
+app.use("/api/test", (req, res) => {
+    res.json({ "msg": "hello" })
+})
 
-app.use('/auth/google', authRoutes)
+app.use('/api/auth/google', authRoutes)
 app.use("/api/logout", (req, res) => {
     req.logout()
     res.send(req.user)
 })
 
-app.use("/user", (req, res) => {
+app.use("/api/user", (req, res) => {
+    const data = req.body
     res.json(req.user)
 })
-app.use('/', (req, res) => {
-    res.send("hello")
-})
+// app.use('/', (req, res) => {
+//     res.send("hello")
+// })
 
 
 

@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  padding: 0 50px;
+  //   position: fixed;
+  width: 80vw;
+  height: 50px;
+  background-color: #07beb8;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  .logo {
+    flex: 1;
+  }
+  .navbar {
+    // flex: 1;
+  }
+}
