@@ -6,6 +6,7 @@ import Header from "./components/header/Header";
 import { useGetUserQuery } from "./app/api/userApi";
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,11 +20,11 @@ const router = createBrowserRouter([
   },
 ]);
 
-const res = await fetch('/api/user')
-const data = await res.json();
-console.log(data);
+
 
 const App = () => {
+
+
   const { isLoading, isError, isSuccess, data, error } = useGetUserQuery("")
   console.log(isLoading, isError, isSuccess, data, error);
   return (

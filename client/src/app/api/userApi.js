@@ -11,3 +11,5 @@ export const userApi = createApi({
 })
 
 export const { useGetUserQuery } = userApi
+
+// export { userApi }
